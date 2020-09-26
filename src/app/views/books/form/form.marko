@@ -9,7 +9,7 @@
         <header class="cabecalhoPrincipal">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-4">
+                    <div class="col-8">
                         <h2 class="logo" style="color: #fff"><img src="/static/images/bookstore.svg" class="logo-rodape" width="50"/> &nbsp Igor's Bookstore - Book Registration</h2>
                     </div>
                     <div class="cabecalhoPrincipal-navegacao col-4">
@@ -30,7 +30,7 @@
                 </div>
 
                 <form action="/books/form" method="post">
-
+                    <br>
                     <div if(data.book.id)>
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="id" value="${data.book.id}">
@@ -49,7 +49,7 @@
                         <textarea cols="20" rows="10"  id="description" name="description" placeholder="Harry Potter, a lonely orphan who discovers that he is actually a wizard..." class="form-control">${data.book.description}</textarea>
                     </div>
 
-                    <input type="submit" value="Submit" class="btn btn-danger"/>
+                    <input type="submit" value="Submit" class="btn btn-outline-danger"/>
                 </form>
             </div>
         </main>
