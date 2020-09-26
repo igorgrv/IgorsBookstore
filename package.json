@@ -1,0 +1,26 @@
+{
+  "name": "igorsbookstore",
+  "version": "1.0.0",
+  "description": "This project is based on Alura's project, which the purpose is only for my study",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorgrv/IgorsBookstore.git"
+  },
+  "author": "Igorgrv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorgrv/IgorsBookstore/issues"
+  },
+  "homepage": "https://github.com/igorgrv/IgorsBookstore#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "marko": "^4.23.4",
+    "nodemon": "^2.0.4",
+    "sqlite3": "^5.0.0"
+  }
+}
