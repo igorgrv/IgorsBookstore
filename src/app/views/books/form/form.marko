@@ -23,8 +23,8 @@
         <main class="conteudoPrincipal">
             <div class="container">
 
-                <div if(data.errors)>
-                    <div class="alert alert-danger" for(erro in data.errors)>
+                <div if(data.errorsValidation)>
+                    <div class="alert alert-danger" for(erro in data.errorsValidation)>
                         ${erro.param} - ${erro.msg}
                     </div>
                 </div>

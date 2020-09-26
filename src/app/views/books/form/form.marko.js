@@ -18,12 +18,12 @@ function render(input, out, __component, component, state) {
 
   out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\">Igor's Bookstore - Book Registration</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container>");
 
-  if (data.errors) {
+  if (data.errorsValidation) {
     out.w("<div>");
 
     var $for$0 = 0;
 
-    marko_forOf(data.errors, function(erro) {
+    marko_forOf(data.errorsValidation, function(erro) {
       var $keyScope$0 = "[" + (($for$0++) + "]");
 
       out.w("<div class=\"alert alert-danger\">" +

@@ -38,9 +38,9 @@ class BookController {
       const errors = validationResult(req);
       console.log(JSON.stringify(errors));
       if (!errors.isEmpty()) {
-        return resp.marko(require('../views/books/form/form.marko'), {
-          book: req.body,
-          errors: errors.array(),
+        return resp.marko(template.books.form, {
+          book: {},
+          errorsValidation: errors.array(),
         });
       }
       bookDao
