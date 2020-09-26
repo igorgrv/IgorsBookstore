@@ -1,5 +1,5 @@
-let tabelaLivros = document.querySelector('#books');
-tabelaLivros.addEventListener('click', (evento) => {
+let tabelaBooks = document.querySelector('#books');
+tabelaBooks.addEventListener('click', (evento) => {
   let elementoClicado = evento.target;
 
   if (elementoClicado.dataset.type == 'remocao') {

@@ -1,4 +1,4 @@
 module.exports = {
-  list: require('./list/list.marko'),
-  form: require('./form/form.marko'),
-};
+    list: require('./list/list.marko'),
+    form: require('./form/form.marko')
+}

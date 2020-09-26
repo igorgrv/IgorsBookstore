@@ -4,7 +4,7 @@ const db = require('../../config/database');
 const BookDao = require('../dao/bookDao');
 const bookDao = new BookDao(db);
 
-const template = require('../views/template');
+const template = require('../views/templates');
 
 class BookController {
   static routes() {

@@ -1,4 +1,4 @@
-const template = require('../views/template');
+const template = require('../views/templates');
 
 class HomeController {
   static routes() {

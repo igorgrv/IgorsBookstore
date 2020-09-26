@@ -3,7 +3,7 @@ require('marko/express');
 
 const express = require('express');
 const app = express();
-const template = require('../app/views/template');
+const template = require('../app/views/templates');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
