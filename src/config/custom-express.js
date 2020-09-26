@@ -24,6 +24,9 @@ app.use(
   })
 );
 
+const sessionAuthentication = require('./sessao-autenticacao');
+sessionAuthentication(app);
+
 const routes = require('../app/routes/routes');
 routes(app);
 

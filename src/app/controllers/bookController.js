@@ -9,6 +9,7 @@ const template = require('../views/templates');
 class BookController {
   static routes() {
     return {
+      authenticated: '/books*',
       books: '/books',
       form: '/books/form',
       delete: '/books/:id',
@@ -35,16 +36,15 @@ class BookController {
 
   insert() {
     return (req, res) => {
+
       const errors = validationResult(req);
-      console.log(JSON.stringify(errors));
       if (!errors.isEmpty()) {
         return resp.marko(template.books.form, {
-          book: {},
+          book: req.body,
           errorsValidation: errors.array(),
         });
       }
-      bookDao
-        .add(req.body)
+      bookDao.add(req.body)
         .then(res.redirect(BookController.routes().books))
         .catch((err) => console.log(err));
     };

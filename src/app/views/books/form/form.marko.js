@@ -23,13 +23,13 @@ function render(input, out, __component, component, state) {
 
     var $for$0 = 0;
 
-    marko_forOf(data.errorsValidation, function(erro) {
+    marko_forOf(data.errorsValidation, function(error) {
       var $keyScope$0 = "[" + (($for$0++) + "]");
 
       out.w("<div class=\"alert alert-danger\">" +
-        marko_escapeXml(erro.param) +
+        marko_escapeXml(error.param) +
         " - " +
-        marko_escapeXml(erro.msg) +
+        marko_escapeXml(error.msg) +
         "</div>");
     });
 
