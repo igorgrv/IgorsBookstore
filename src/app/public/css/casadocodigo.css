@@ -1,9 +1,9 @@
 .cabecalhoPrincipal {
-    background-color: #FFAA60;
+    background-color: #f83333;
 }
 
 .cabecalhoPrincipal .logo {
-    margin: 0;
+    margin: 10;
 }
 
 .cabecalhoPrincipal-navegacao {
