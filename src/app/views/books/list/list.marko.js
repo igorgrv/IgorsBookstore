@@ -16,29 +16,29 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-4><h2 class=logo style=\"color: #fff\">Igor's Bookstore</h2></div><div class=\"cabecalhoPrincipal-navegacao col-8\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container><h1> Listagem de livros </h1><table id=livros class=\"table table-striped table-hover\"><thead class=thead-dark><tr><th>ID</th><th>Título</th><th>Preço</th><th>Editar</th><th>Remover</th></tr></thead><tbody>");
+  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-4><h2 class=logo style=\"color: #fff\"><img src=/static/images/bookstore.svg class=logo-rodape width=50> &nbsp Igor's Bookstore - Books</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container><table id=books class=\"table table-striped table-hover\"><thead class=thead-dark><tr><th>ID</th><th>Title</th><th>Price</th><th>Edit</th><th>Remove</th></tr></thead><tbody>");
 
   var $for$0 = 0;
 
-  marko_forOf(data.livros, function(livro) {
+  marko_forOf(data.books, function(book) {
     var $keyScope$0 = "[" + (($for$0++) + "]");
 
     out.w("<tr" +
-      marko_attr("id", "livro_" + (livro.id == null ? "" : livro.id)) +
+      marko_attr("id", "book_" + (book.id == null ? "" : book.id)) +
       "><td>" +
-      marko_escapeXml(livro.id) +
+      marko_escapeXml(book.id) +
       "</td><td>" +
-      marko_escapeXml(livro.titulo) +
+      marko_escapeXml(book.title) +
       "</td><td>" +
-      marko_escapeXml(livro.preco) +
+      marko_escapeXml(book.price) +
       "</td><td><a" +
-      marko_attr("href", "/livros/form/" + (livro.id == null ? "" : livro.id)) +
-      ">Editar</a></td><td><a href=#" +
-      marko_attr("data-ref", livro.id) +
-      " data-type=remocao>Remover</a></td></tr>");
+      marko_attr("href", "/books/form/" + (book.id == null ? "" : book.id)) +
+      ">Edit</a></td><td><a href=#" +
+      marko_attr("data-ref", book.id) +
+      " data-type=remocao>Remove</a></td></tr>");
   });
 
-  out.w("</tbody></table></div></main><footer class=rodape><div class=container><div class=\"row align-items-center\"><div class=col-4><img src=/static/images/bookstore.svg class=logo-rodape></div><div class=col-8><ul class=redesSociais><li><a href=http://www.facebook.com/casadocodigo class=compartilhar-facebook target=_blank>/IgorsBookstore</a></li><li><a href=http://www.twitter.com/casadocodigo class=compartilhar-twitter target=_blank>@IgorsBookstore</a></li></ul></div></div></div></footer><script src=/static/js/remove-livro.js>\r\n        </script>");
+  out.w("</tbody></table></div></main><footer class=rodape><div class=container><div class=\"row align-items-center\"><div class=col-4><img src=/static/images/bookstore.svg class=logo-rodape></div><div class=col-8><ul class=redesSociais><li><a href=http://www.facebook.com/casadocodigo class=compartilhar-facebook target=_blank>/IgorsBookstore</a></li><li><a href=http://www.twitter.com/casadocodigo class=compartilhar-twitter target=_blank>@IgorsBookstore</a></li></ul></div></div></div></footer><script src=/static/js/remove-book.js>\r\n        </script>");
 
   init_components_tag({}, out);
 
