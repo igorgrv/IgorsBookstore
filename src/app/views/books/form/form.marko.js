@@ -16,14 +16,14 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\"><img src=/static/images/bookstore.svg class=logo-rodape width=50> &nbsp Igor's Bookstore - Book Registration</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container>");
+  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\">Igor's Bookstore - Book Registration</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container>");
 
-  if (data.errosValidacao) {
+  if (data.errors) {
     out.w("<div>");
 
     var $for$0 = 0;
 
-    marko_forOf(data.errosValidacao, function(erro) {
+    marko_forOf(data.errors, function(erro) {
       var $keyScope$0 = "[" + (($for$0++) + "]");
 
       out.w("<div class=\"alert alert-danger\">" +
@@ -54,7 +54,7 @@ function render(input, out, __component, component, state) {
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "45");
+  await_reorderer_tag({}, out, __component, "44");
 
   _preferred_script_location_tag({}, out);
 

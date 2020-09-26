@@ -1,3 +1,5 @@
+const { validationResult } = require('express-validator');
+
 const db = require('../../config/database');
 const BookDao = require('../dao/bookDao');
 const bookDao = new BookDao(db);
@@ -33,6 +35,14 @@ class BookController {
 
   insert() {
     return (req, res) => {
+      const errors = validationResult(req);
+      console.log(JSON.stringify(errors));
+      if (!errors.isEmpty()) {
+        return resp.marko(require('../views/books/form/form.marko'), {
+          book: req.body,
+          errors: errors.array(),
+        });
+      }
       bookDao
         .add(req.body)
         .then(res.redirect(BookController.routes().books))
@@ -52,7 +62,6 @@ class BookController {
     };
   }
 
-
   editForm() {
     return (req, res) => {
       const id = req.params.id;
@@ -67,7 +76,7 @@ class BookController {
     };
   }
 
-  update(){
+  update() {
     return (req, res) => {
       bookDao
         .update(req.body)

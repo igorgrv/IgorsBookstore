@@ -16,7 +16,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\"><img src=/static/images/bookstore.svg class=logo-rodape width=50> &nbsp Igor's Bookstore - Books</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container><br><div class=col-4><a href=/books/form><button class=\"btn btn-outline-primary\">Add a new book</button></a></div><br><table id=books class=\"table table-striped table-hover\"><thead class=thead-dark><tr><th>ID</th><th>Title</th><th>Price</th><th colspan=2 style=text-align:center>Actions</th></tr></thead><tbody>");
+  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\">Igor's Bookstore - Books</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container><br><div class=col-4><a href=/books/form><button class=\"btn btn-outline-primary\">Add a new book</button></a></div><br><table id=books class=\"table table-striped table-hover\"><thead class=thead-dark><tr><th>ID</th><th>Title</th><th>Price</th><th colspan=2 style=text-align:center>Actions</th></tr></thead><tbody>");
 
   var $for$0 = 0;
 
@@ -42,7 +42,7 @@ function render(input, out, __component, component, state) {
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "49");
+  await_reorderer_tag({}, out, __component, "48");
 
   _preferred_script_location_tag({}, out);
 

@@ -12,11 +12,11 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\"><img src=/static/images/bookstore.svg class=logo-rodape width=50> &nbsp Igor's Bookstore - Not found</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container><p>Page it was not found!</p><a href=/ >Please, come back</a></div></main><footer class=rodape><div class=container><div class=\"row align-items-center\"><div class=col-4><img src=/static/images/bookstore.svg class=logo-rodape></div><div class=col-8><ul class=redesSociais><li><a href=http://www.facebook.com/casadocodigo class=compartilhar-facebook target=_blank>/IgorsBookstore</a></li><li><a href=http://www.twitter.com/casadocodigo class=compartilhar-twitter target=_blank>@IgorsBookstore</a></li></ul></div></div></div></footer>");
+  out.w("<html><head><meta charset=utf-8><link rel=stylesheet href=/static/css/bootstrap.min.css><link rel=stylesheet href=/static/css/fontawesome.min.css><link rel=stylesheet href=/static/css/casadocodigo.css></head><body><header class=cabecalhoPrincipal><div class=container><div class=\"row align-items-center\"><div class=col-8><h2 class=logo style=\"color: #fff\">Igor's Bookstore - Not found</h2></div><div class=\"cabecalhoPrincipal-navegacao col-4\"><a href=/login class=login>Login</a></div></div></div></header><main class=conteudoPrincipal><div class=container><p>Page it was not found!</p><a href=/ >Please, come back</a></div></main><footer class=rodape><div class=container><div class=\"row align-items-center\"><div class=col-4><img src=/static/images/bookstore.svg class=logo-rodape></div><div class=col-8><ul class=redesSociais><li><a href=http://www.facebook.com/casadocodigo class=compartilhar-facebook target=_blank>/IgorsBookstore</a></li><li><a href=http://www.twitter.com/casadocodigo class=compartilhar-twitter target=_blank>@IgorsBookstore</a></li></ul></div></div></div></footer>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "30");
+  await_reorderer_tag({}, out, __component, "29");
 
   _preferred_script_location_tag({}, out);
 
