@@ -1,6 +1,10 @@
 # Bookstore - NodeJS from scratch
 
-<img src=”https://github.com/igorgrv/IgorsBookstore/blob/master/readmeImages/books.PNG?raw=true” width=“400”>
+<img src="https://github.com/igorgrv/IgorsBookstore/blob/master/readmeImages/books.PNG?raw=true" width="400">
+
+<img src="https://github.com/igorgrv/IgorsBookstore/blob/master/readmeImages/form.PNG?raw=true" width="400">
+
+<img src="https://github.com/igorgrv/IgorsBookstore/blob/master/readmeImages/login.PNG?raw=true" width="400">
 
 ## About the Project
 
