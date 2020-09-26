@@ -39,17 +39,17 @@ class BookDao {
     });
   }
 
-  findById(book) {
+  findById(id) {
     return new Promise((resolve, reject) => {
       this._db.get(
         `
 					SELECT * FROM books WHERE id = ?
 				`,
-        [book.id],
+        [id],
         (err, result) => {
-					 if (err) return reject('We could not find any book');
-           return resolve(result);
-				}
+          if (err) return reject('We could not find any book');
+          return resolve(result);
+        }
       );
     });
   }
@@ -65,6 +65,28 @@ class BookDao {
           if (err) {
             console.log(err);
             return reject('It was not possible to REMOVE the book');
+          }
+          return resolve();
+        }
+      );
+    });
+  }
+
+  update(book) {
+    return new Promise((resolve, reject) => {
+      this._db.run(
+        `
+        UPDATE books
+        SET title = ?,
+        price = ?,
+        description = ?
+        WHERE id = ?
+        `,
+        [book.title, book.price, book.description, book.id],
+        (err) => {
+          if (err) {
+            console.log(err);
+            return reject('It was not possible to ADD the book');
           }
           return resolve();
         }

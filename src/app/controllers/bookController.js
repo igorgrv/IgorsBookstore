@@ -41,13 +41,39 @@ class BookController {
   }
 
   remove() {
-    return (req,res) => {
+    return (req, res) => {
       const id = req.params.id;
       bookDao
         .remove(id)
-        .then(() => {res.redirect(BookController.routes().books)})
+        .then(() => {
+          res.redirect(BookController.routes().books);
+        })
         .catch((err) => console.log(err));
-    }
+    };
+  }
+
+
+  editForm() {
+    return (req, res) => {
+      const id = req.params.id;
+      console.log('entrou no edit - id: ' + id);
+      bookDao
+        .findById(id)
+        .then((book) => {
+          console.log('book encontrado: ' + book);
+          res.marko(template.books.form, { book: book });
+        })
+        .catch((err) => console.log(err));
+    };
+  }
+
+  update(){
+    return (req, res) => {
+      bookDao
+        .update(req.body)
+        .then(res.redirect(BookController.routes().books))
+        .catch((err) => console.log(err));
+    };
   }
 }
 
